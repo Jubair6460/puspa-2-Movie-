@@ -1,0 +1,22 @@
+import os
+import time
+
+def animated_text(text):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(0.05)
+    print()
+
+animated_text("\033[1;36mস্বাগতম!\033[0m \033[1;33mআমাদের বিশেষ স্ক্রিপ্টে।\033[0m\n")
+
+print("\033[1;34mHello bro! How are you?\033[0m")
+print("\033[1;34mJoin our Telegram for exclusive updates and offers!\033[0m\n")
+
+choice = input("\033[1;33mDo you want to join our Telegram channel? (Yes/No): \033[0m")
+
+if choice.strip().lower() in ['yes', 'no']:
+    print("\033[1;31mOpening Telegram...\033[0m")
+    os.system('xdg-open https://t.me/jubairff')
+else:
+    print("\033[1;31mInvalid input! Still opening Telegram...\033[0m")
+    os.system('xdg-open https://t.me/jubairff')
